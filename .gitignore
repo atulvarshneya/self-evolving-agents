@@ -1,0 +1,109 @@
+# ---------------------------------------------------------------------------
+# Secrets
+# ---------------------------------------------------------------------------
+# The shared .env at the repo root holds ANTHROPIC_API_KEY; never commit it
+.env
+.env.*
+!.env.example
+
+# ---------------------------------------------------------------------------
+# Agent runtime state (recreated by the agents on first run)
+# ---------------------------------------------------------------------------
+# evolvingagent01: LLM-written tools (deleted after 24 hours anyway)
+evolvingagent01/tools/generated/
+
+# evolvingagent02: the learned SOP ledger and the last reviewed case
+evolvingagent02/memory/
+
+# Files that tasks create "in the current folder", which is the agent's folder
+# when run from its notebook (e.g. hw.docx)
+evolvingagent*/*.docx
+evolvingagent*/*.xlsx
+evolvingagent*/*.pptx
+evolvingagent*/*.pdf
+evolvingagent*/*.csv
+evolvingagent*/*.txt
+!evolvingagent*/requirements.txt
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Packaging and builds
+build/
+dist/
+develop-eggs/
+eggs/
+.eggs/
+parts/
+sdist/
+wheels/
+share/python-wheels/
+*.egg-info/
+*.egg
+.installed.cfg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# ---------------------------------------------------------------------------
+# Testing, linting and type checking
+# ---------------------------------------------------------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+.mypy_cache/
+.pyre/
+.pytype/
+.ruff_cache/
+
+# ---------------------------------------------------------------------------
+# Jupyter
+# ---------------------------------------------------------------------------
+.ipynb_checkpoints/
+.virtual_documents/
+
+# ---------------------------------------------------------------------------
+# Editors, IDEs and tools
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+*.sw?
+*~
+.#*
+\#*#
+*.suo
+*.sln
+*.njsproj
+*.ntvs*
+
+# Claude Code: personal settings stay local (shared .claude/settings.json is committed)
+.claude/settings.local.json
+
+# ---------------------------------------------------------------------------
+# Operating systems
+# ---------------------------------------------------------------------------
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# Logs and scratch files
+*.log
+*.tmp

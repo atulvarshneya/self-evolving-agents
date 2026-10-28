@@ -1,0 +1,14 @@
+{
+  "report_id": "TR-1042",
+  "employee": "A. Rivera",
+  "expense_log": [
+    {"item_id": "1", "date": "2026-10-12", "merchant": "Hotel Nova", "category": "lodging", "amount": 189.00},
+    {"item_id": "2", "date": "2026-10-12", "merchant": "City Cabs", "category": "transport", "amount": 34.50},
+    {"item_id": "3", "date": "2026-10-13", "merchant": "Bistro 9", "category": "meal", "amount": 72.40}
+  ],
+  "receipts": [
+    {"item_id": "1", "merchant": "Hotel Nova", "date": "2026-10-12", "amount": 189.00, "description": "1 night"},
+    {"item_id": "2", "merchant": "City Cabs", "date": "2026-10-12", "amount": 34.50, "description": "airport to hotel"},
+    {"item_id": "3", "merchant": "Bistro 9", "date": "2026-10-13", "amount": 72.40, "description": "dinner"}
+  ]
+}

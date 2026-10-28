@@ -1,0 +1,16 @@
+{
+  "report_id": "TR-1051",
+  "employee": "J. Okafor",
+  "expense_log": [
+    {"item_id": "1", "date": "2026-10-19", "merchant": "Harbor Grill", "category": "meal", "amount": 68.00},
+    {"item_id": "2", "date": "2026-10-19", "merchant": "Metro Rail", "category": "transport", "amount": 45.00},
+    {"item_id": "3", "date": "2026-10-20", "merchant": "", "category": "supplies", "amount": 22.10},
+    {"item_id": "4", "date": "2026-10-20", "merchant": "Daily Grind", "category": "meal", "amount": 6.75}
+  ],
+  "receipts": [
+    {"item_id": "1", "merchant": "Harbor Grill", "date": "2026-10-19", "amount": 68.00, "description": "dinner"},
+    {"item_id": "2", "merchant": "Metro Rail", "date": "2026-10-19", "amount": 54.00, "description": "weekly pass"},
+    {"item_id": "3", "merchant": "", "date": "2026-10-20", "amount": 22.10, "description": "printer paper"},
+    {"item_id": "4", "merchant": "Daily Grind", "date": "2026-10-20", "amount": 6.75, "description": "breakfast coffee"}
+  ]
+}
