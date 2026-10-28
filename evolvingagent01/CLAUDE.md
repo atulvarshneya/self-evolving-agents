@@ -2,7 +2,7 @@
 
 A self-evolving agent that grows its own toolbox. When the LLM finds no tool that solves a task, it writes a new Python tool to disk, which is then hot-loaded and run. Tools that fail are fixed, and tools that are close but missing something are extended.
 
-The repo-wide conventions in the [root CLAUDE.md](../CLAUDE.md) apply here too.
+The repo-wide conventions in the [root CLAUDE.md](../CLAUDE.md) apply here too. [docs/DESIGN.md](docs/DESIGN.md) explains the design and the reasons behind it; keep it in step with the code.
 
 ## Running
 
