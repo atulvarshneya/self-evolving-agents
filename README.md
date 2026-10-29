@@ -34,20 +34,26 @@ Requirements: Python 3.11+ and an API key for the LLM.
 
 ```bash
 git clone https://github.com/atulvarshneya/self-evolving-agents.git
-cd Self-Evolving-Agents
+cd self-evolving-agents
 python -m venv .venv
 source .venv/bin/activate
 pip install -r evolvingagent01/requirements.txt -r evolvingagent02/requirements.txt
 pip install jupyter      # to run the notebook drivers
 ```
 
-Create a `.env` file in the repo root. It is shared by all agents and is ignored by git:
+Copy the settings template to `.env` and fill in your API key:
 
 ```bash
-ANTHROPIC_API_KEY=your-key-here
-DEFAULT_CLAUDE_MODEL=claude-sonnet-5-5   # optional
-DEFAULT_MAX_TOKENS=16000                 # optional
+cp env.example .env
 ```
+
+```bash
+ANTHROPIC_API_KEY=your-key-here     # required
+DEFAULT_CLAUDE_MODEL=...            # the model to use
+DEFAULT_MAX_TOKENS=16000            # the maximum length of each LLM reply
+```
+
+`.env` is shared by all agents and is ignored by git, so your key is never committed. If `DEFAULT_CLAUDE_MODEL` or `DEFAULT_MAX_TOKENS` is removed, the agents fall back to built-in defaults.
 
 ### Running an agent
 
@@ -71,7 +77,8 @@ python -m pytest evolvingagent02/tests
 
 ```
 Self-Evolving-Agents/
-  .env                  shared settings (not committed)
+  env.example           template for .env
+  .env                  shared settings, copied from env.example (not committed)
   CLAUDE.md             guidance for Claude Code: shared conventions and the agent index
   evolvingagentNN/      one self-contained package per agent
     *.py                the agent's modules

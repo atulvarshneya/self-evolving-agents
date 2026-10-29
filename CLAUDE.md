@@ -15,7 +15,7 @@ When you add an agent, add a row here.
 
 ## Repo layout
 
-Each agent is a self-contained Python package in its own top-level folder (`evolvingagentNN/`). The package folder holds everything specific to that agent: its modules, its notebook driver, `requirements.txt`, `docs/`, `tests/` and its own `CLAUDE.md`. Agents don't import from each other. Only `.env` is shared, at the repo root.
+Each agent is a self-contained Python package in its own top-level folder (`evolvingagentNN/`). The package folder holds everything specific to that agent: its modules, its notebook driver, `requirements.txt`, `docs/`, `tests/` and its own `CLAUDE.md`. Agents don't import from each other. Only `.env` is shared, at the repo root. It isn't committed; `env.example` is its template, so when a setting is added, add it there too.
 
 ## Conventions shared by all agents
 
